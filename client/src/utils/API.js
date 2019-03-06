@@ -2,7 +2,10 @@ import axios from "axios";
 
 export default {
   // Gets all books
-  hitWebHook: function() {
-    return axios.get("/api/books");
+  getLog: function() {
+    return axios.post("/api/formHook", {
+      title: 'This is the title',
+      message: 'This is the message'
+    });
   }
 };
