@@ -22,7 +22,14 @@ class formHook extends Component {
          <>
             <h1>Post Log</h1>
             {this.state.log.length ? (
-               <p>{this.state.log}</p>
+               <>
+                  {this.state.log.map(log => (
+                     <>
+                        <p>{log.title}</p>
+                        <p>{log.message}</p>
+                     </>
+                  ))}
+               </>
             ) : (
                <h3>I got nothing...</h3>
             )}
